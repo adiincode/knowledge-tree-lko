@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge Tree — Coaching in Lucknow, Sitapur, Kanpur &amp; Online</title>
+<meta name="description" content="Knowledge Tree is a Lucknow-based coaching institute with branches in Sitapur and Kanpur, and online classes across India. 25 teachers, 300+ students, Olympiad preparation. Fees start at ₹999/month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F4EC;
+    --bg-alt:#EFEADA;
+    --bg-deep:#26381F;
+    --ink:#1C2A1D;
+    --ink-soft:#4F5C4B;
+    --green:#2F5233;
+    --green-deep:#1F3823;
+    --gold:#C9A227;
+    --gold-soft:#E4CE7C;
+    --brick:#A63D2F;
+    --brick-deep:#832E22;
+    --line:#D8D2BC;
+    --paper:#FFFDF7;
+    --radius-s:4px;
+    --radius-m:10px;
+    --serif:'Fraunces', serif;
+    --sans:'IBM Plex Sans', sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+  ul{margin:0;padding:0;list-style:none;}
+  h1,h2,h3,h4{font-family:var(--serif);margin:0;font-weight:600;color:var(--green-deep);}
+  p{margin:0;}
+  .wrap{
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  section{padding:96px 0;}
+  .eyebrow{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.95rem;
+    color:var(--brick);
+    margin-bottom:14px;
+    letter-spacing:0.01em;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 26px;
+    border-radius:var(--radius-s);
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:1rem;
+    text-decoration:none;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{
+    background:var(--brick);
+    color:var(--paper);
+    box-shadow:0 3px 0 var(--brick-deep);
+  }
+  .btn-primary:hover{box-shadow:0 5px 0 var(--brick-deep);}
+  .btn-outline{
+    background:transparent;
+    border-color:var(--green);
+    color:var(--green-deep);
+  }
+  .btn-outline:hover{background:var(--green);color:var(--paper);}
+  .btn svg{width:19px;height:19px;flex-shrink:0;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(246,244,236,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 28px;
+    max-width:1140px;
+    margin:0 auto;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+  }
+  .brand-mark{width:34px;height:34px;flex-shrink:0;}
+  .brand-name{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:1.28rem;
+    color:var(--green-deep);
+    line-height:1;
+  }
+  .brand-name span{color:var(--brick);}
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:34px;
+  }
+  .nav-links a{
+    text-decoration:none;
+    font-weight:500;
+    font-size:0.96rem;
+    color:var(--ink-soft);
+    transition:color 0.15s ease;
+  }
+  .nav-links a:hover{color:var(--brick);}
+  .nav-cta{display:flex;align-items:center;gap:18px;}
+  .nav-toggle{display:none;}
+  .menu-check{display:none;}
+
+  @media (max-width:860px){
+    .nav-links{
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:var(--paper);
+      flex-direction:column;
+      align-items:flex-start;
+      gap:0;
+      border-bottom:1px solid var(--line);
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.25s ease;
+    }
+    .nav-links a{
+      padding:16px 28px;
+      width:100%;
+      border-top:1px solid var(--line);
+    }
+    .menu-check:checked ~ .nav-links{max-height:400px;}
+    .nav-toggle{
+      display:flex;
+      flex-direction:column;
+      gap:5px;
+      background:none;
+      border:none;
+      cursor:pointer;
+      padding:6px;
+    }
+    .nav-toggle span{width:24px;height:2px;background:var(--green-deep);}
+    .nav-cta .btn-outline{display:none;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:76px 0 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero-copy .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .hero-copy .eyebrow::before{
+    content:"";
+    width:22px;height:1.5px;background:var(--brick);display:inline-block;
+  }
+  .hero h1{
+    font-size:clamp(2.3rem, 4.4vw, 3.4rem);
+    line-height:1.09;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--brick);
+    font-weight:500;
+  }
+  .hero-sub{
+    margin-top:22px;
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-actions{
+    margin-top:32px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .hero-fee-note{
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  .hero-fee-note strong{color:var(--green-deep);}
+
+  .hero-stats{
+    margin-top:52px;
+    display:grid;
+    grid-template-columns:repeat(4,auto);
+    gap:34px;
+    border-top:1px solid var(--line);
+    padding-top:28px;
+  }
+  .hero-stat b{
+    display:block;
+    font-family:var(--serif);
+    font-size:1.75rem;
+    color:var(--green-deep);
+    font-weight:700;
+  }
+  .hero-stat span{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+
+  .hero-art{position:relative;}
+  .hero-art svg{width:100%;height:auto;}
+  .grow-line{
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    animation:grow 1.7s ease-out forwards;
+  }
+  .grow-line.d1{animation-delay:0.05s;}
+  .grow-line.d2{animation-delay:0.35s;}
+  .grow-line.d3{animation-delay:0.6s;}
+  .grow-line.d4{animation-delay:0.85s;}
+  @keyframes grow{to{stroke-dashoffset:0;}}
+  .pop{
+    opacity:0;
+    transform:scale(0.6);
+    animation:pop 0.5s ease-out forwards;
+  }
+  .pop.p1{animation-delay:1.0s;}
+  .pop.p2{animation-delay:1.25s;}
+  .pop.p3{animation-delay:1.5s;}
+  .pop.p4{animation-delay:1.75s;}
+  @keyframes pop{to{opacity:1;transform:scale(1);}}
+  @media (prefers-reduced-motion: reduce){
+    .grow-line{stroke-dashoffset:0;animation:none;}
+    .pop{opacity:1;transform:scale(1);animation:none;}
+  }
+
+  @media (max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero-art{order:-1;max-width:380px;margin:0 auto;}
+    .hero-stats{grid-template-columns:repeat(2,auto);row-gap:22px;}
+  }
+
+  /* ---------- Section headings ---------- */
+  .section-head{
+    max-width:640px;
+    margin-bottom:52px;
+  }
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .section-head h2{
+    font-size:clamp(1.8rem,3vw,2.4rem);
+    line-height:1.15;
+  }
+  .section-head p{
+    margin-top:16px;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+  }
+
+  /* ---------- About / founder ---------- */
+  .about{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .about .wrap{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:start;
+  }
+  .founder-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-m);
+    padding:32px;
+    background:var(--bg);
+  }
+  .founder-avatar{
+    width:76px;height:76px;
+    border-radius:50%;
+    background:var(--green);
+    color:var(--gold-soft);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);
+    font-size:1.6rem;
+    font-weight:700;
+    margin-bottom:18px;
+  }
+  .founder-card h3{font-size:1.2rem;margin-bottom:2px;}
+  .founder-role{color:var(--brick);font-size:0.9rem;font-weight:600;margin-bottom:16px;}
+  .founder-quote{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.08rem;
+    color:var(--green-deep);
+    line-height:1.5;
+  }
+  .about-points{display:flex;flex-direction:column;gap:26px;margin-top:8px;}
+  .about-point{
+    display:grid;
+    grid-template-columns:44px 1fr;
+    gap:18px;
+  }
+  .about-point .icon{
+    width:44px;height:44px;
+    border-radius:50%;
+    background:var(--bg-alt);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .about-point .icon svg{width:22px;height:22px;stroke:var(--green-deep);}
+  .about-point h4{font-size:1.08rem;margin-bottom:6px;}
+  .about-point p{color:var(--ink-soft);font-size:0.98rem;}
+
+  @media (max-width:860px){
+    .about .wrap{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Branches (tree trunk visual) ---------- */
+  .branches{position:relative;}
+  .trunk-line{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    margin-bottom:0;
+  }
+  .branch-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    position:relative;
+    margin-top:8px;
+  }
+  .branch-grid::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:12.5%;
+    right:12.5%;
+    height:2px;
+    background:var(--green);
+    opacity:0.35;
+  }
+  .branch-card{
+    padding:0 18px;
+    position:relative;
+    text-align:center;
+  }
+  .branch-card::before{
+    content:"";
+    position:absolute;
+    top:-2px;
+    left:50%;
+    transform:translateX(-50%);
+    width:2px;
+    height:34px;
+    background:var(--green);
+    opacity:0.55;
+  }
+  .branch-dot{
+    width:16px;height:16px;
+    border-radius:50%;
+    background:var(--gold);
+    border:3px solid var(--paper);
+    box-shadow:0 0 0 2px var(--green);
+    margin:32px auto 18px;
+  }
+  .branch-card.flagship .branch-dot{background:var(--brick);}
+  .branch-card h3{font-size:1.15rem;margin-bottom:6px;}
+  .branch-tag{
+    display:inline-block;
+    font-size:0.76rem;
+    font-weight:600;
+    color:var(--brick);
+    background:rgba(166,61,47,0.08);
+    padding:3px 10px;
+    border-radius:20px;
+    margin-bottom:12px;
+  }
+  .branch-card p{color:var(--ink-soft);font-size:0.92rem;}
+  .branch-card .addr{
+    margin-top:14px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--line);
+    padding-top:12px;
+  }
+
+  @media (max-width:760px){
+    .branch-grid{grid-template-columns:1fr 1fr;row-gap:44px;}
+    .branch-grid::before{display:none;}
+  }
+  @media (max-width:480px){
+    .branch-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Programs / Olympiad ---------- */
+  .programs{background:var(--green-deep);color:var(--bg);}
+  .programs .section-head h2, .programs .eyebrow{color:var(--bg);}
+  .programs .eyebrow{color:var(--gold-soft);}
+  .programs .section-head p{color:#C9D3C4;}
+  .program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .program-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:var(--radius-m);
+    padding:30px 26px;
+  }
+  .program-card .icon{
+    width:46px;height:46px;
+    border-radius:10px;
+    background:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:20px;
+  }
+  .program-card .icon svg{width:24px;height:24px;stroke:var(--green-deep);}
+  .program-card h3{color:var(--bg);font-size:1.15rem;margin-bottom:10px;}
+  .program-card p{color:#C9D3C4;font-size:0.95rem;}
+
+  .olympiad-strip{
+    margin-top:44px;
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:var(--radius-m);
+    padding:28px 30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+    background:rgba(201,162,39,0.08);
+  }
+  .olympiad-strip h4{color:var(--gold-soft);font-size:1.1rem;margin-bottom:6px;}
+  .olympiad-strip p{color:#C9D3C4;font-size:0.93rem;max-width:52ch;}
+
+  @media (max-width:820px){
+    .program-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Teachers ---------- */
+  .teachers .wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .teacher-stat{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius-m);
+    padding:36px;
+  }
+  .teacher-stat .big{
+    font-family:var(--serif);
+    font-size:3.2rem;
+    font-weight:700;
+    color:var(--brick);
+    line-height:1;
+  }
+  .teacher-stat .big-label{
+    margin-top:8px;
+    font-size:1.05rem;
+    color:var(--green-deep);
+    font-weight:600;
+  }
+  .teacher-stat p{margin-top:16px;color:var(--ink-soft);font-size:0.96rem;}
+  .subject-tags{
+    display:flex;flex-wrap:wrap;gap:10px;
+  }
+  .subject-tags li{
+    border:1px solid var(--line);
+    background:var(--paper);
+    padding:9px 16px;
+    border-radius:20px;
+    font-size:0.9rem;
+    color:var(--green-deep);
+    font-weight:500;
+  }
+  .teachers-copy .section-head{margin-bottom:26px;}
+
+  @media (max-width:860px){
+    .teachers .wrap{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Top Teacher of the Month ---------- */
+  .top-teachers{background:var(--green-deep);color:var(--bg);}
+  .top-teachers .section-head h2, .top-teachers .eyebrow{color:var(--bg);}
+  .top-teachers .eyebrow{color:var(--gold-soft);}
+  .top-teachers .section-head p{color:#C9D3C4;}
+  .top-teacher-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+    max-width:760px;
+    margin:0 auto;
+  }
+  .top-teacher-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.16);
+    border-radius:var(--radius-m);
+    padding:32px 28px;
+    text-align:center;
+  }
+  .top-teacher-avatar{
+    width:70px;height:70px;
+    border-radius:50%;
+    background:var(--gold);
+    color:var(--green-deep);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);
+    font-size:1.5rem;
+    font-weight:700;
+    margin:0 auto 18px;
+  }
+  .top-teacher-badge{
+    display:inline-block;
+    font-size:0.74rem;
+    font-weight:600;
+    color:var(--green-deep);
+    background:var(--gold-soft);
+    padding:4px 12px;
+    border-radius:20px;
+    margin-bottom:14px;
+    letter-spacing:0.02em;
+  }
+  .top-teacher-card h3{color:var(--bg);font-size:1.2rem;margin-bottom:6px;}
+  .top-teacher-card p{color:#C9D3C4;font-size:0.92rem;}
+
+  @media (max-width:640px){
+    .top-teacher-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Best Tutors ---------- */
+  .best-tutors{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .tutors-banner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+    background:var(--green-deep);
+    border-radius:var(--radius-m);
+    padding:32px 34px;
+    margin-bottom:44px;
+  }
+  .tutors-banner .big{
+    font-family:var(--serif);
+    font-size:3rem;
+    font-weight:700;
+    color:var(--gold-soft);
+    line-height:1;
+  }
+  .tutors-banner .big-label{
+    margin-top:6px;
+    font-size:1.02rem;
+    color:var(--bg);
+    font-weight:600;
+  }
+  .tutors-banner p{
+    color:#C9D3C4;
+    font-size:0.95rem;
+    max-width:44ch;
+  }
+  .tutor-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+  }
+  .tutor-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-m);
+    padding:26px 22px;
+    background:var(--bg);
+    text-align:center;
+  }
+  .tutor-card .count{
+    font-family:var(--serif);
+    font-size:2.4rem;
+    font-weight:700;
+    color:var(--brick);
+    line-height:1;
+  }
+  .tutor-card .count-label{
+    margin-top:4px;
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    font-weight:500;
+  }
+  .tutor-card h4{
+    margin-top:14px;
+    font-size:1.02rem;
+    color:var(--green-deep);
+  }
+  .tutor-card.more{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:var(--bg-alt);
+    border-style:dashed;
+  }
+  .tutor-card.more p{color:var(--ink-soft);font-size:0.92rem;}
+  .tutors-cta{
+    margin-top:36px;
+    text-align:center;
+  }
+  .tutors-cta p{
+    color:var(--ink-soft);
+    font-size:0.95rem;
+    margin-bottom:18px;
+  }
+
+  @media (max-width:860px){
+    .tutor-grid{grid-template-columns:repeat(2,1fr);}
+    .tutors-banner{flex-direction:column;align-items:flex-start;}
+  }
+  @media (max-width:480px){
+    .tutor-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Pricing ---------- */
+  .pricing{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .price-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .price-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-m);
+    padding:34px 28px;
+    background:var(--bg);
+    display:flex;
+    flex-direction:column;
+  }
+  .price-card.featured{
+    background:var(--green-deep);
+    border-color:var(--green-deep);
+    color:var(--bg);
+    transform:translateY(-10px);
+  }
+  .price-card.featured h3, .price-card.featured .price-tag b{color:var(--bg);}
+  .price-card.featured .price-desc, .price-card.featured li{color:#C9D3C4;}
+  .price-card.featured .btn-outline{border-color:var(--gold);color:var(--gold-soft);}
+  .price-card.featured .btn-outline:hover{background:var(--gold);color:var(--green-deep);}
+  .price-card h3{font-size:1.2rem;margin-bottom:10px;}
+  .price-desc{color:var(--ink-soft);font-size:0.92rem;margin-bottom:20px;}
+  .price-tag{margin-bottom:22px;}
+  .price-tag b{
+    font-family:var(--serif);
+    font-size:2.3rem;
+    color:var(--green-deep);
+  }
+  .price-tag span{font-size:0.9rem;color:var(--ink-soft);}
+  .price-card ul{
+    display:flex;flex-direction:column;gap:11px;
+    margin-bottom:28px;
+    flex-grow:1;
+  }
+  .price-card li{
+    font-size:0.92rem;
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+  }
+  .price-card li svg{width:17px;height:17px;flex-shrink:0;margin-top:3px;stroke:var(--brick);}
+  .price-card.featured li svg{stroke:var(--gold-soft);}
+  .price-note{
+    text-align:center;
+    margin-top:34px;
+    color:var(--ink-soft);
+    font-size:0.92rem;
+  }
+
+  @media (max-width:900px){
+    .price-grid{grid-template-columns:1fr;}
+    .price-card.featured{transform:none;}
+  }
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .testi-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius-m);
+    padding:28px;
+  }
+  .testi-card p{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--green-deep);
+    line-height:1.55;
+  }
+  .testi-who{
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .testi-avatar{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--bg-alt);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-weight:700;font-size:0.9rem;color:var(--green-deep);
+  }
+  .testi-who b{display:block;font-size:0.92rem;color:var(--ink);}
+  .testi-who span{font-size:0.82rem;color:var(--ink-soft);}
+
+  @media (max-width:820px){.testi-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Contact / CTA ---------- */
+  .contact{
+    background:var(--green-deep);
+    color:var(--bg);
+    position:relative;
+    overflow:hidden;
+  }
+  .contact .wrap{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:56px;
+    align-items:center;
+  }
+  .contact h2{color:var(--bg);font-size:clamp(1.9rem,3.4vw,2.5rem);line-height:1.16;}
+  .contact p.lead{color:#C9D3C4;margin-top:16px;font-size:1.05rem;max-width:48ch;}
+  .contact-actions{margin-top:32px;display:flex;gap:16px;flex-wrap:wrap;}
+  .whatsapp-btn{
+    background:#25D366;
+    color:#0B3B22;
+    box-shadow:0 3px 0 #1AA352;
+  }
+  .contact-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.16);
+    border-radius:var(--radius-m);
+    padding:32px;
+  }
+  .contact-card .row{
+    display:flex;
+    gap:16px;
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .contact-card .row:last-child{border-bottom:none;padding-bottom:0;}
+  .contact-card .row:first-child{padding-top:0;}
+  .contact-card .row svg{width:20px;height:20px;stroke:var(--gold-soft);flex-shrink:0;margin-top:2px;}
+  .contact-card .row b{display:block;font-size:0.95rem;margin-bottom:2px;}
+  .contact-card .row span{color:#C9D3C4;font-size:0.9rem;}
+
+  @media (max-width:900px){.contact .wrap{grid-template-columns:1fr;}}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--bg-deep);
+    color:#C9D3C4;
+    padding:44px 0 28px;
+  }
+  .foot-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding-bottom:28px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .foot-brand{display:flex;align-items:center;gap:10px;}
+  .foot-brand span{font-family:var(--serif);font-weight:700;color:var(--bg);font-size:1.1rem;}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap;}
+  .foot-links a{text-decoration:none;color:#C9D3C4;font-size:0.9rem;}
+  .foot-links a:hover{color:var(--gold-soft);}
+  .foot-bottom{
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:0.82rem;
+    color:#8AA083;
+  }
+
+  /* Floating WhatsApp */
+  .float-wa{
+    position:fixed;
+    bottom:22px;
+    right:22px;
+    width:58px;height:58px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.25);
+    z-index:60;
+    text-decoration:none;
+  }
+  .float-wa svg{width:29px;height:29px;fill:#0B3B22;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="19" stroke="#2F5233" stroke-width="1.4"/>
+        <path d="M20 30V14" stroke="#2F5233" stroke-width="2" stroke-linecap="round"/>
+        <path d="M20 18L13 12" stroke="#2F5233" stroke-width="2" stroke-linecap="round"/>
+        <path d="M20 15L27 10" stroke="#2F5233" stroke-width="2" stroke-linecap="round"/>
+        <path d="M20 22L14 18" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="13" cy="12" r="2.6" fill="#C9A227"/>
+        <circle cx="27" cy="10" r="2.6" fill="#A63D2F"/>
+        <circle cx="14" cy="18" r="2.6" fill="#2F5233"/>
+      </svg>
+      <span class="brand-name">Knowledge <span>Tree</span></span>
+    </a>
+
+    <input type="checkbox" id="menu-check" class="menu-check">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#branches">Branches</a></li>
+      <li><a href="#programs">Olympiad</a></li>
+      <li><a href="#teachers">Teachers</a></li>
+      <li><a href="#top-teachers">Top Teacher</a></li>
+      <li><a href="#best-tutors">Tutors</a></li>
+      <li><a href="#pricing">Fees</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-outline">Talk to us</a>
+      <label for="menu-check" class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">LUCKNOW · SITAPUR · KANPUR · ONLINE PAN-INDIA</p>
+        <h1>One root in Lucknow.<br>Branches reaching <em>every student.</em></h1>
+        <p class="hero-sub">Knowledge Tree is a Lucknow-founded coaching institute built by Aditya Maurya, now teaching 300+ students across three cities and online, with a 25-teacher team and dedicated Olympiad preparation.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/918917009287" class="btn btn-primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.4L2 22l4.7-1.6A11 11 0 1 0 20.5 3.5Z" stroke="#FFFDF7" stroke-width="1.5"/><path d="M8 8.6c0 5 3.7 8.4 8.4 8.4.8 0 1.4-.7 1.2-1.5l-.4-1.6a1 1 0 0 0-1-.7l-1.6.2a1 1 0 0 1-.9-.3 8 8 0 0 1-2.4-2.4 1 1 0 0 1-.3-.9l.2-1.6a1 1 0 0 0-.7-1L9 6.9C8.4 6.7 7.6 7.2 7.6 8Z" fill="#FFFDF7"/></svg>
+            Message us on WhatsApp
+          </a>
+          <a href="#pricing" class="btn btn-outline">See fee plans</a>
+        </div>
+        <p class="hero-fee-note">Programs start from <strong>₹999 / month</strong></p>
+
+        <div class="hero-stats">
+          <div class="hero-stat"><b>300+</b><span>students taught</span></div>
+          <div class="hero-stat"><b>25</b><span>teachers on the team</span></div>
+          <div class="hero-stat"><b>4</b><span>cities &amp; online reach</span></div>
+          <div class="hero-stat"><b>Olympiad</b><span>partner institute</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 460" fill="none">
+          <path class="grow-line d1" d="M210 430 C210 340 200 300 210 250" stroke="#2F5233" stroke-width="4" stroke-linecap="round"/>
+          <path class="grow-line d1" d="M210 250 C170 220 140 190 100 130" stroke="#2F5233" stroke-width="3" stroke-linecap="round"/>
+          <path class="grow-line d2" d="M210 250 C240 210 260 170 250 100" stroke="#2F5233" stroke-width="3" stroke-linecap="round"/>
+          <path class="grow-line d2" d="M210 300 C160 290 120 300 70 260" stroke="#2F5233" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="grow-line d3" d="M210 300 C260 300 300 320 340 300" stroke="#2F5233" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="grow-line d3" d="M210 360 C170 375 130 380 90 410" stroke="#2F5233" stroke-width="2.2" stroke-linecap="round"/>
+          <path class="grow-line d4" d="M210 360 C250 375 290 385 330 415" stroke="#2F5233" stroke-width="2.2" stroke-linecap="round"/>
+
+          <circle class="pop p1" cx="100" cy="130" r="15" fill="#A63D2F"/>
+          <text class="pop p1" x="100" y="106" text-anchor="middle" font-family="IBM Plex Sans" font-size="12" font-weight="600" fill="#1C2A1D">Lucknow HQ</text>
+
+          <circle class="pop p2" cx="250" cy="100" r="11" fill="#C9A227"/>
+          <text class="pop p2" x="250" y="80" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" font-weight="600" fill="#1C2A1D">Sitapur</text>
+
+          <circle class="pop p3" cx="70" cy="260" r="11" fill="#C9A227"/>
+          <text class="pop p3" x="70" y="240" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" font-weight="600" fill="#1C2A1D">Kanpur</text>
+
+          <circle class="pop p4" cx="340" cy="300" r="11" fill="#2F5233"/>
+          <text class="pop p4" x="345" y="280" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" font-weight="600" fill="#1C2A1D">Online</text>
+
+          <ellipse cx="210" cy="440" rx="90" ry="9" fill="#2F5233" opacity="0.12"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / FOUNDER -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="founder-card">
+        <div class="founder-avatar">AM</div>
+        <h3>Aditya Maurya</h3>
+        <p class="founder-role">Founder, Knowledge Tree</p>
+        <p class="founder-quote">"We started with a handful of students in Lucknow. Every branch we've opened since has followed the same rule — teach the fundamentals properly, and results follow."</p>
+      </div>
+
+      <div class="about-copy">
+        <div class="section-head">
+          <p class="eyebrow">WHY FAMILIES CHOOSE US</p>
+          <h2>Built like a tree — strong root, honest growth.</h2>
+          <p>Knowledge Tree began as a single Lucknow classroom and grew the way a tree does: one steady root, then branches added only when the last one was strong. That's still how we open new centres today.</p>
+        </div>
+
+        <div class="about-points">
+          <div class="about-point">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5M5 15l7 5 7-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h4>One curriculum, four locations</h4><p>Lucknow, Sitapur, Kanpur and our online classroom all follow the same syllabus and testing schedule, so a student can move between them without losing pace.</p></div>
+          </div>
+          <div class="about-point">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M17 20h5v-2a4 4 0 0 0-3-3.87M9 20H4v-2a4 4 0 0 1 3-3.87M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM21 7a4 4 0 1 1-8 0" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h4>25 teachers, small batches</h4><p>Every subject is handled by a teacher who specialises in it, and batch sizes are kept small enough for doubts to actually get answered in class.</p></div>
+          </div>
+          <div class="about-point">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 15a4 4 0 0 0 4-4V5a4 4 0 1 0-8 0v6a4 4 0 0 0 4 4ZM19 11a7 7 0 0 1-14 0M12 19v3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h4>Olympiad training built in</h4><p>Alongside school and board preparation, we run dedicated batches for national and international Olympiad exams across Maths, Science and English.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANCHES -->
+  <section class="branches" id="branches">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">OUR BRANCHES</p>
+        <h2>Rooted in Lucknow. Growing across Uttar Pradesh — and online, everywhere.</h2>
+        <p>Walk into any of our three classrooms, or join the same classes live from anywhere in India.</p>
+      </div>
+
+      <div class="branch-grid">
+        <div class="branch-card flagship">
+          <div class="branch-dot"></div>
+          <span class="branch-tag">Head branch</span>
+          <h3>Lucknow</h3>
+          <p>Our founding centre and head office, running full-time batches for all classes and Olympiad groups.</p>
+          <p class="addr">Main branch · Lucknow, Uttar Pradesh</p>
+        </div>
+        <div class="branch-card">
+          <div class="branch-dot"></div>
+          <span class="branch-tag">Branch</span>
+          <h3>Sitapur</h3>
+          <p>Classroom coaching for school subjects and Olympiad batches, run on the same schedule as Lucknow.</p>
+          <p class="addr">Sitapur, Uttar Pradesh</p>
+        </div>
+        <div class="branch-card">
+          <div class="branch-dot"></div>
+          <span class="branch-tag">Branch</span>
+          <h3>Kanpur</h3>
+          <p>Our newest classroom centre, offering the full Knowledge Tree curriculum to local students.</p>
+          <p class="addr">Kanpur, Uttar Pradesh</p>
+        </div>
+        <div class="branch-card">
+          <div class="branch-dot"></div>
+          <span class="branch-tag">Pan-India</span>
+          <h3>Online</h3>
+          <p>Live, interactive classes for students anywhere in India, with the same teachers and material as our classrooms.</p>
+          <p class="addr">Join from any city · India-wide</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS / OLYMPIAD -->
+  <section class="programs" id="programs">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">PROGRAMS</p>
+        <h2>School coaching, board prep, and Olympiad training — under one roof.</h2>
+        <p>Every program follows a fixed weekly schedule with regular tests, so parents can track progress and not just attendance.</p>
+      </div>
+
+      <div class="program-grid">
+        <div class="program-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 19V5a2 2 0 0 1 2-2h12l2 2v14M4 19a2 2 0 0 0 2 2h14M4 19a2 2 0 0 1 2-2h12M8 7h8M8 11h8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>School &amp; board coaching</h3>
+          <p>Subject-wise coaching aligned to the school syllabus, with regular class tests and doubt sessions.</p>
+        </div>
+        <div class="program-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 15a4 4 0 0 0 4-4V5a4 4 0 1 0-8 0v6a4 4 0 0 0 4 4ZM19 11a7 7 0 0 1-14 0M12 19v3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Olympiad preparation</h3>
+          <p>Dedicated batches partnering with national and international Olympiad exams in Maths, Science and English.</p>
+        </div>
+        <div class="program-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 21h8M12 18v3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Live online classes</h3>
+          <p>The same syllabus and teachers as our classrooms, delivered live so students anywhere in India can join in.</p>
+        </div>
+      </div>
+
+      <div class="olympiad-strip">
+        <div>
+          <h4>Preparing students for multiple Olympiad boards</h4>
+          <p>Our Olympiad batches are run separately from regular school coaching, with practice tests and previous-year question drills.</p>
+        </div>
+        <a href="https://wa.me/918917009287" class="btn btn-outline" style="border-color:#E4CE7C;color:#E4CE7C;" target="_blank" rel="noopener">Ask about Olympiad batches</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHERS -->
+  <section class="teachers" id="teachers">
+    <div class="wrap">
+      <div class="teacher-stat">
+        <div class="big">25</div>
+        <div class="big-label">Teachers across all branches</div>
+        <p>Each subject is taught by a dedicated teacher rather than one person covering several — from primary foundations through board-level and Olympiad coaching.</p>
+      </div>
+
+      <div class="teachers-copy">
+        <div class="section-head">
+          <p class="eyebrow">OUR TEACHING TEAM</p>
+          <h2>A team picked subject by subject.</h2>
+          <p>Every branch draws from the same pool of 25 teachers, so the quality of teaching doesn't change whether a student is in Lucknow, Sitapur, Kanpur, or joining online.</p>
+        </div>
+        <ul class="subject-tags">
+          <li>Mathematics</li>
+          <li>Science</li>
+          <li>English</li>
+          <li>Social Studies</li>
+          <li>Hindi</li>
+          <li>Computer Basics</li>
+          <li>Reasoning</li>
+          <li>Olympiad Drills</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP TEACHER OF THE MONTH -->
+  <section class="top-teachers" id="top-teachers">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">TEACHER OF THE MONTH</p>
+        <h2>Our August Month Top Teachers</h2>
+        <p>Recognising the two teachers whose classes, results and feedback stood out the most this August.</p>
+      </div>
+
+      <div class="top-teacher-grid">
+        <div class="top-teacher-card">
+          <div class="top-teacher-avatar">SS</div>
+          <span class="top-teacher-badge">Top Teacher · August</span>
+          <h3>Swati Singh</h3>
+          <p>Recognised for outstanding teaching and consistent results this August.</p>
+        </div>
+        <div class="top-teacher-card">
+          <div class="top-teacher-avatar">RS</div>
+          <span class="top-teacher-badge">Top Teacher · August</span>
+          <h3>Ritanshi Singh</h3>
+          <p>Recognised for outstanding teaching and consistent results this August.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR BEST TUTORS -->
+  <section class="best-tutors" id="best-tutors">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">HOME TUTORS</p>
+        <h2>Our Best Tutors</h2>
+        <p>Beyond our classrooms, Knowledge Tree also places trained home tutors with families across Lucknow — matched to your child's class, subject and locality.</p>
+      </div>
+
+      <div class="tutors-banner">
+        <div>
+          <div class="big">56+</div>
+          <div class="big-label">Tutors delivered so far</div>
+        </div>
+        <p>We've delivered over 56 tutors to families all over Lucknow, and we're placing more every month across new localities.</p>
+      </div>
+
+      <div class="section-head" style="margin-bottom:28px;">
+        <p class="eyebrow">AVAILABLE TUTORS RIGHT NOW</p>
+        <h3 style="font-family:var(--sans);font-weight:600;font-size:1.15rem;color:var(--ink-soft);">Tutors currently available, area-wise</h3>
+      </div>
+
+      <div class="tutor-grid">
+        <div class="tutor-card">
+          <div class="count">3</div>
+          <div class="count-label">Tutors available</div>
+          <h4>Madiyaon, Lucknow</h4>
+        </div>
+        <div class="tutor-card">
+          <div class="count">4</div>
+          <div class="count-label">Tutors available</div>
+          <h4>Keshav Nagar, Lucknow</h4>
+        </div>
+        <div class="tutor-card">
+          <div class="count">2</div>
+          <div class="count-label">Tutors available</div>
+          <h4>Vikas Nagar, Lucknow</h4>
+        </div>
+        <div class="tutor-card">
+          <div class="count">12</div>
+          <div class="count-label">Tutors available</div>
+          <h4>Kursi Road, Lucknow</h4>
+        </div>
+        <div class="tutor-card more">
+          <p>...and many more localities across Lucknow. Message us to check your area.</p>
+        </div>
+      </div>
+
+      <div class="tutors-cta">
+        <p>To hire a tutor for your child, contact us on WhatsApp.</p>
+        <a href="https://wa.me/918917009287" class="btn whatsapp-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.4L2 22l4.7-1.6A11 11 0 1 0 20.5 3.5Z" stroke="#0B3B22" stroke-width="1.5"/><path d="M8 8.6c0 5 3.7 8.4 8.4 8.4.8 0 1.4-.7 1.2-1.5l-.4-1.6a1 1 0 0 0-1-.7l-1.6.2a1 1 0 0 1-.9-.3 8 8 0 0 1-2.4-2.4 1 1 0 0 1-.3-.9l.2-1.6a1 1 0 0 0-.7-1L9 6.9C8.4 6.7 7.6 7.2 7.6 8Z" fill="#0B3B22"/></svg>
+          Hire a tutor — 89170 09287
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">FEE PLANS</p>
+        <h2>Simple, monthly fees — starting at ₹999.</h2>
+        <p>Exact fees vary a little by class and subject count. Message us on WhatsApp for a plan matched to your child's class.</p>
+      </div>
+
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Online</h3>
+          <p class="price-desc">Live classes from home, for students anywhere in India.</p>
+          <div class="price-tag"><b>₹999</b><span> / month onward</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Live interactive classes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Same syllabus as classroom batches</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly test &amp; progress update</li>
+          </ul>
+          <a href="https://wa.me/918917009287" class="btn btn-outline" target="_blank" rel="noopener">Ask about this plan</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Classroom</h3>
+          <p class="price-desc">Full in-person coaching at our Lucknow, Sitapur or Kanpur branch.</p>
+          <div class="price-tag"><b>₹1,499</b><span> / month onward</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>In-person daily/weekly classes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Regular in-class doubt sessions</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Printed test series</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Parent-teacher updates</li>
+          </ul>
+          <a href="https://wa.me/918917009287" class="btn btn-outline" target="_blank" rel="noopener">Ask about this plan</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Olympiad batch</h3>
+          <p class="price-desc">Focused preparation for national and international Olympiad exams.</p>
+          <div class="price-tag"><b>₹1,299</b><span> / month onward</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Subject-specific Olympiad drills</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Previous-year question practice</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Available online or in classroom</li>
+          </ul>
+          <a href="https://wa.me/918917009287" class="btn btn-outline" target="_blank" rel="noopener">Ask about this plan</a>
+        </div>
+      </div>
+
+      <p class="price-note">Fees shown are starting prices and vary by class and subject load — the exact plan is confirmed over a quick WhatsApp chat.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">FROM OUR PARENTS</p>
+        <h2>What families say after joining.</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p>"What I liked most was how the same teacher stayed with my daughter's batch all year — no constant switching."</p>
+          <div class="testi-who">
+            <div class="testi-avatar">R</div>
+            <div><b>Parent, Lucknow branch</b><span>Class 8 student</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p>"The online batch felt just as organised as a classroom one — same tests, same schedule, no compromise."</p>
+          <div class="testi-who">
+            <div class="testi-avatar">S</div>
+            <div><b>Parent, Online batch</b><span>Class 10 student</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p>"My son joined the Olympiad batch this year and actually looks forward to the extra practice sheets."</p>
+          <div class="testi-who">
+            <div class="testi-avatar">P</div>
+            <div><b>Parent, Kanpur branch</b><span>Class 6 student</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow" style="color:#E4CE7C;">GET IN TOUCH</p>
+        <h2>Have a question about a class or branch? Just message us.</h2>
+        <p class="lead">Tell us your child's class and city, and we'll point you to the right branch, batch timing, and fee plan — usually within the same conversation.</p>
+        <div class="contact-actions">
+          <a href="https://wa.me/918917009287" class="btn whatsapp-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.4L2 22l4.7-1.6A11 11 0 1 0 20.5 3.5Z" stroke="#0B3B22" stroke-width="1.5"/><path d="M8 8.6c0 5 3.7 8.4 8.4 8.4.8 0 1.4-.7 1.2-1.5l-.4-1.6a1 1 0 0 0-1-.7l-1.6.2a1 1 0 0 1-.9-.3 8 8 0 0 1-2.4-2.4 1 1 0 0 1-.3-.9l.2-1.6a1 1 0 0 0-.7-1L9 6.9C8.4 6.7 7.6 7.2 7.6 8Z" fill="#0B3B22"/></svg>
+            Chat on WhatsApp — 89170 09287
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b>WhatsApp / Call</b><span>+91 89170 09287</span></div>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b>Head branch</b><span>Lucknow, Uttar Pradesh</span></div>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M14 9h1M9 13h1M14 13h1M9 21v-4h6v4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b>Branches</b><span>Lucknow · Sitapur · Kanpur</span></div>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b>Online classes</b><span>Open to students pan-India</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg width="26" height="26" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="19" stroke="#E4CE7C" stroke-width="1.4"/>
+          <path d="M20 30V14" stroke="#E4CE7C" stroke-width="2" stroke-linecap="round"/>
+          <path d="M20 18L13 12" stroke="#E4CE7C" stroke-width="2" stroke-linecap="round"/>
+          <path d="M20 15L27 10" stroke="#E4CE7C" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Knowledge Tree</span>
+      </div>
+      <ul class="foot-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#branches">Branches</a></li>
+        <li><a href="#programs">Olympiad</a></li>
+        <li><a href="#teachers">Teachers</a></li>
+        <li><a href="#top-teachers">Top Teacher</a></li>
+        <li><a href="#best-tutors">Tutors</a></li>
+        <li><a href="#pricing">Fees</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Knowledge Tree. Founded by Aditya Maurya, Lucknow.</span>
+      <span>WhatsApp: +91 89170 09287</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918917009287" class="float-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.4L2 22l4.7-1.6A11 11 0 1 0 20.5 3.5Z"/><path d="M8 8.6c0 5 3.7 8.4 8.4 8.4.8 0 1.4-.7 1.2-1.5l-.4-1.6a1 1 0 0 0-1-.7l-1.6.2a1 1 0 0 1-.9-.3 8 8 0 0 1-2.4-2.4 1 1 0 0 1-.3-.9l.2-1.6a1 1 0 0 0-.7-1L9 6.9C8.4 6.7 7.6 7.2 7.6 8Z" fill="#25D366"/></svg>
+</a>
+
+</body>
+</html>
